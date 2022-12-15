@@ -1,0 +1,53 @@
+.content {
+  max-width: 1170px;
+  min-width: 375px;
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 120px 0 15px;
+  text-transform: uppercase;
+  font-weight: 500;
+  color: $light-gray;
+}
+
+.title {
+font: 60px $title-font;
+font-weight: 900;
+color: $gold-color;
+text-transform: uppercase;
+margin-bottom: 40px;
+  
+  &__divider {
+    height: 20px;
+    position: relative;
+    max-width: 450px;
+    margin: 0 auto 40px;
+
+    &::before,
+    &::after {
+      content:'';
+      position: absolute;
+      width: 210px;
+      height: 1px;
+      background-color: $gold-color;
+      top: 50%;
+    }
+
+    &::before {
+      left: 0;
+    }
+
+    &::after {
+      right: 0;
+    }
+
+    &__img {
+      padding: 0 5px;
+    }
+
+
+  }
+}

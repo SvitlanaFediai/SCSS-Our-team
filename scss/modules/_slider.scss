@@ -1,0 +1,150 @@
+.slider {
+max-width: 1030px;
+display: grid;
+grid-template-columns: repeat(2, 50%);
+align-items: center;
+justify-content: space-between;
+margin: 0 auto;
+
+  &__photo {
+    
+    &-wrapper {
+      width: 430px;
+      height: 430px;
+      padding: 15px;
+      border: 1px solid $gold-color;
+      position: relative;
+
+      &::before, 
+      &::after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 50%;
+        transform: translate(50%, -50%);
+        background: white;
+        
+      }
+
+      &::before {
+        height: 230px;
+        width: 110%;
+      }
+
+      &::after {
+        height: 110%;
+        width: 230px;
+      }
+      
+    }
+
+    &-image {
+      height: 400px;
+      width: 400px;
+      position: relative;
+      z-index: 2;
+    }
+
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-left: 1px solid $gold-color;
+    padding: 70px 0;
+  }
+
+  &__title {
+  font: 36px 'Roboto', sans-serif;
+  color: $gray-color;
+  position: relative;
+
+    &::after {
+    content: ' ';
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100px;
+    height: 1px;
+    background-color: $gold-color;
+    }
+
+  }
+
+  &__subtitle {
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 60px;
+  margin-bottom: 30px;
+  }
+
+  &__list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+
+  }
+  &__icon  {
+    width: 30px;
+    height: 30px;
+    margin-left: 5px;
+  }
+
+  &__text {
+    max-width: 430px;
+    font-weight: 500;
+    color: $middle-gray;
+    line-height: 1.7;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  &__divider {
+  display: flex;
+
+    &::before,
+    &::after {
+    content: '';
+    flex: 1;
+    }
+
+    &--dashed {
+    background-color: $gold-color;
+    height: 4px;
+    width: 50px ;
+    margin-bottom: 30px;
+      
+
+      &::before,
+      &::after {
+      content: '';
+      background: #fff;
+      height: 0;
+      transform: rotate(90deg);
+      padding: 2.5px 0;
+      }
+    }
+  }
+
+
+  &__button {
+    font: button-font;
+    color: $gray-color;
+    text-decoration: none;
+    border: 1px solid $gold-color;
+    text-transform: uppercase;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+
+    &:hover {
+      background-color: $gold-color;
+      transform: scale(1.2);
+    }
+  }
+
+}
+
